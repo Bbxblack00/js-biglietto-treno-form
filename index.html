@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Biglietto treno</title>
+    <style media="screen">
+
+    .titolo{
+      text-align: center;
+      color: red;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="titolo">BIGLIETTO TRENO</h1>
+    <h1 class="titolo" id="risultato"></h1>
+  </body>
+  <script type="text/javascript">
+
+
+
+    var numberKm = parseInt(prompt('Inserisci il numero di kilometri : '));
+    var age = parseInt(prompt('Inserisci la tua età : '));
+    var appPrice = numberKm * 0.21;
+    // console.log(appPrice, age, numberKm);
+
+    var littleSale = appPrice * 0.2;
+    var oldSale = appPrice * 0.4;
+
+
+    if (age < 18){
+      document.getElementById('risultato').innerHTML = "Il prezzo del biglietto è: " + (appPrice - littleSale) + " euro.";
+    } else if (age > 65) {
+      document.getElementById('risultato').innerHTML = "Il prezzo del biglietto è: " + (appPrice - oldSale) + " euro.";
+    } else {
+      document.getElementById('risultato').innerHTML = "Il prezzo del biglietto è: " + appPrice + " euro.";
+    }
+
+
+
+  </script>
+</html>
